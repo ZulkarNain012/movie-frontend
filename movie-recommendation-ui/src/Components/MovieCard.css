@@ -1,0 +1,35 @@
+.movie-card {
+  background-color: rgba(255, 255, 255, 0.08);
+  border-radius: 10px;
+  padding: 16px;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
+  border: 1px solid rgba(255, 255, 255, 0.1);
+  opacity: 0;
+  transform: translateY(10px);
+  animation: slideIn 0.5s ease-out forwards;
+  transition: all 0.3s ease;
+  cursor: pointer;
+}
+
+.movie-card:hover {
+  background-color: rgba(255, 255, 255, 0.12);
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.25);
+  transform: translateY(-4px);
+  border-color: rgba(255, 255, 255, 0.2);
+}
+
+.movie-card h4 {
+  margin: 0;
+  color: var(--text-on-dark);
+  font-size: 15px;
+  font-weight: 500;
+  line-height: 1.5;
+  word-wrap: break-word;
+}
+
+@keyframes slideIn {
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
