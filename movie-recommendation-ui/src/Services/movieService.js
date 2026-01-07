@@ -2,8 +2,7 @@
 
 export const getMovieRecommendations = async (userInput) => {
   try {
-    console.log("Fetching recommendations for input:", userInput);
-    const response = await fetch("http://localhost:5000/api/recommend", {
+    const response = await fetch("https://movie-backend-kodl.onrender.com", {
       method: "POST",
       headers: {
         "Content-Type": "application/json",
@@ -16,7 +15,6 @@ export const getMovieRecommendations = async (userInput) => {
     }
 
     const data = await response.json();
-    console.log("Received data:", data);
     return data.movies; 
   } catch (error) {
     console.error("Error fetching movies:", error);
